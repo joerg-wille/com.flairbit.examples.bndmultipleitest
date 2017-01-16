@@ -1,0 +1,9 @@
+**/.classpath
+**/.project
+**/.settings
+bckups/
+**/*.class
+**/generated
+**/target
+**/data
+TEST-*.xml
