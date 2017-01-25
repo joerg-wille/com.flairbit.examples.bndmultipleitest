@@ -88,8 +88,6 @@ karaf.version: 4.0.8
 	javax.transaction:javax.transaction-api,\
     org.apache.karaf.jaas:org.apache.karaf.jaas.boot,\
     javax.annotation:javax.annotation-api,\
-    com.sun.xml.bind:jaxb-core,\
-    com.sun.xml.bind:jaxb-impl,\
     javax.annotation:javax.annotation-api,\
     org.apache.karaf:org.apache.karaf.exception,\
     org.apache.servicemix.bundles:org.apache.servicemix.bundles.xalan,\
@@ -108,7 +106,8 @@ karaf.version: 4.0.8
 	javax.transaction.xa;version=1.2,\
     org.apache.karaf.exception;version=${karaf.version},\
     org.apache.karaf.jaas.boot;version=${karaf.version},\
-    org.apache.karaf.jaas.boot.principal;version=${karaf.version}
+    org.apache.karaf.jaas.boot.principal;version=${karaf.version},\
+    com.sun.xml.bind
 
 -runvm.karaf: \
 	-Dkaraf.etc="load",\

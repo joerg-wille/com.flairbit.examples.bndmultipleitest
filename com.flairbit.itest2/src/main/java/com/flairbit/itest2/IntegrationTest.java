@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
+import java.util.Arrays;
 
 import org.apache.karaf.features.FeaturesService;
 import org.junit.BeforeClass;
@@ -107,6 +108,16 @@ public class IntegrationTest {
 			}
 		};
 		tracker.open();
+		
+		Arrays.asList(context.getBundles()).stream()
+		.filter(it -> it.getState() == Bundle.RESOLVED)
+		.forEach(b -> {
+			try {
+				b.start();
+			} catch (BundleException e) {
+				;
+			}
+		});
 	}
 
 	private static void adjustStartLevel(Bundle bundle) {
